@@ -10,7 +10,7 @@
 		6FA22AE360A1FE3651D2580A /* Pods_Publisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1514B89832C12E2F9A6B19F /* Pods_Publisher.framework */; };
 		7EB93FEB27F7DC5500962A7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB93FEA27F7DC5500962A7C /* AppDelegate.swift */; };
 		7EB93FED27F7DC5500962A7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB93FEC27F7DC5500962A7C /* SceneDelegate.swift */; };
-		7EB93FEF27F7DC5500962A7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB93FEE27F7DC5500962A7C /* ViewController.swift */; };
+		7EB93FEF27F7DC5500962A7C /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB93FEE27F7DC5500962A7C /* HomePageViewController.swift */; };
 		7EB93FF227F7DC5500962A7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB93FF027F7DC5500962A7C /* Main.storyboard */; };
 		7EB93FF427F7DC5600962A7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB93FF327F7DC5600962A7C /* Assets.xcassets */; };
 		7EB93FF727F7DC5600962A7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB93FF527F7DC5600962A7C /* LaunchScreen.storyboard */; };
@@ -18,6 +18,7 @@
 		7EB9402327F7E77A00962A7C /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB9402227F7E77A00962A7C /* FirebaseManager.swift */; };
 		7EB9402627F7F30300962A7C /* HomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB9402527F7F30300962A7C /* HomePageCell.swift */; };
 		7EB9402827F7F4AF00962A7C /* PublishArticlePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB9402727F7F4AF00962A7C /* PublishArticlePageViewController.swift */; };
+		7EB9402A27F80BDB00962A7C /* publishedArticleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB9402927F80BDB00962A7C /* publishedArticleObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +27,7 @@
 		7EB93FE727F7DC5500962A7C /* Publisher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Publisher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB93FEA27F7DC5500962A7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EB93FEC27F7DC5500962A7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7EB93FEE27F7DC5500962A7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EB93FEE27F7DC5500962A7C /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		7EB93FF127F7DC5500962A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EB93FF327F7DC5600962A7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EB93FF627F7DC5600962A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +36,7 @@
 		7EB9402227F7E77A00962A7C /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		7EB9402527F7F30300962A7C /* HomePageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCell.swift; sourceTree = "<group>"; };
 		7EB9402727F7F4AF00962A7C /* PublishArticlePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishArticlePageViewController.swift; sourceTree = "<group>"; };
+		7EB9402927F80BDB00962A7C /* publishedArticleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publishedArticleObject.swift; sourceTree = "<group>"; };
 		D1514B89832C12E2F9A6B19F /* Pods_Publisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Publisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				7EB9402227F7E77A00962A7C /* FirebaseManager.swift */,
+				7EB9402927F80BDB00962A7C /* publishedArticleObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,7 +108,7 @@
 		7EB9402127F7E74500962A7C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7EB93FEE27F7DC5500962A7C /* ViewController.swift */,
+				7EB93FEE27F7DC5500962A7C /* HomePageViewController.swift */,
 				7EB9402727F7F4AF00962A7C /* PublishArticlePageViewController.swift */,
 			);
 			path = Controller;
@@ -244,10 +247,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EB9402327F7E77A00962A7C /* FirebaseManager.swift in Sources */,
-				7EB93FEF27F7DC5500962A7C /* ViewController.swift in Sources */,
+				7EB93FEF27F7DC5500962A7C /* HomePageViewController.swift in Sources */,
 				7EB9402827F7F4AF00962A7C /* PublishArticlePageViewController.swift in Sources */,
 				7EB93FEB27F7DC5500962A7C /* AppDelegate.swift in Sources */,
 				7EB9402627F7F30300962A7C /* HomePageCell.swift in Sources */,
+				7EB9402A27F80BDB00962A7C /* publishedArticleObject.swift in Sources */,
 				7EB93FED27F7DC5500962A7C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
