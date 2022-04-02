@@ -163,25 +163,27 @@
                                     <constraint firstAttribute="height" constant="1" id="o2Z-hW-2UU"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ig-6o-56u">
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ig-6o-56u">
                                 <rect key="frame" x="20" y="109" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cqx-g5-Eny">
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cqx-g5-Eny">
                                 <rect key="frame" x="20" y="147" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input content" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7p-9e-sCa">
-                                <rect key="frame" x="20" y="185" width="374" height="34"/>
+                                <rect key="frame" x="20" y="185" width="374" height="537"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlS-Hh-Q0N">
-                                <rect key="frame" x="20" y="714" width="374" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlS-Hh-Q0N">
+                                <rect key="frame" x="20" y="726" width="374" height="31"/>
+                                <color key="backgroundColor" red="0.24313727020000001" green="0.22745099660000001" blue="0.22745099660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Publish New Article"/>
                                 <connections>
                                     <action selector="publishArticle:" destination="fuM-fU-M6s" eventType="touchUpInside" id="N2y-Nj-WDR"/>
                                 </connections>
@@ -213,6 +215,7 @@
                         <constraints>
                             <constraint firstItem="L6X-nC-yoY" firstAttribute="leading" secondItem="s63-RG-oKc" secondAttribute="leading" constant="16" id="07f-WF-2Ag"/>
                             <constraint firstItem="FlS-Hh-Q0N" firstAttribute="leading" secondItem="s63-RG-oKc" secondAttribute="leading" constant="20" id="2ic-tb-ThQ"/>
+                            <constraint firstItem="FlS-Hh-Q0N" firstAttribute="top" secondItem="I7p-9e-sCa" secondAttribute="bottom" constant="4" id="2jN-Z3-HO0"/>
                             <constraint firstItem="s63-RG-oKc" firstAttribute="trailing" secondItem="L6X-nC-yoY" secondAttribute="trailing" constant="16" id="6bi-mu-DT2"/>
                             <constraint firstItem="s63-RG-oKc" firstAttribute="trailing" secondItem="FlS-Hh-Q0N" secondAttribute="trailing" constant="20" id="8KG-Ez-gs8"/>
                             <constraint firstItem="t1N-Ew-043" firstAttribute="top" secondItem="L6X-nC-yoY" secondAttribute="bottom" id="8Xy-bT-fij"/>
@@ -231,7 +234,7 @@
                             <constraint firstItem="I7p-9e-sCa" firstAttribute="top" secondItem="Cqx-g5-Eny" secondAttribute="bottom" constant="4" id="iLI-Wt-RAy"/>
                             <constraint firstItem="s63-RG-oKc" firstAttribute="trailing" secondItem="I7p-9e-sCa" secondAttribute="trailing" constant="20" id="jfG-Ke-O9j"/>
                             <constraint firstItem="Cqx-g5-Eny" firstAttribute="top" secondItem="2Ig-6o-56u" secondAttribute="bottom" constant="4" id="vV6-Rs-ACj"/>
-                            <constraint firstItem="5Nr-NO-LCc" firstAttribute="top" secondItem="FlS-Hh-Q0N" secondAttribute="bottom" constant="16" id="wGw-yG-73a"/>
+                            <constraint firstItem="5Nr-NO-LCc" firstAttribute="top" secondItem="FlS-Hh-Q0N" secondAttribute="bottom" constant="4" id="wGw-yG-73a"/>
                             <constraint firstItem="5Nr-NO-LCc" firstAttribute="leading" secondItem="EVH-7g-FAc" secondAttribute="leading" constant="16" id="wZW-aq-X0g"/>
                             <constraint firstAttribute="trailing" secondItem="5Nr-NO-LCc" secondAttribute="trailing" constant="16" id="xQf-nc-1aR"/>
                             <constraint firstItem="s63-RG-oKc" firstAttribute="trailing" secondItem="2Ig-6o-56u" secondAttribute="trailing" constant="20" id="y5b-5P-4H7"/>
