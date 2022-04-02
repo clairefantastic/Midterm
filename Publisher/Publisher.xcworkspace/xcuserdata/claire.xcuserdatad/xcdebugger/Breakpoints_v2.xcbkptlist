@@ -7,48 +7,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C15E0155-2A0A-4DC4-AAE7-C1AD3EAE4BF8"
+            uuid = "A61CAC70-D843-4BA8-8777-01044D806D51"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Publisher/Controller/HomePageViewController.swift"
+            filePath = "Publisher/Controller/PublishArticlePageViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "convertTimestamp(serverTimestamp:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "publishArticle(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E4CCA836-CA2C-41ED-B24A-D51E5F8B4394"
+            uuid = "8B3B6BC0-99FE-40DA-A465-F28C35DD2F67"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Publisher/Controller/HomePageViewController.swift"
+            filePath = "Publisher/Controller/PublishArticlePageViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "publishArticle(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0BBAC420-781B-494D-9625-2D88F6A29CE8"
+            uuid = "15995BF7-3C52-4770-AA4B-61227D7D3E97"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Publisher/Controller/HomePageViewController.swift"
+            filePath = "Publisher/Controller/PublishArticlePageViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "publishArticle(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34FFCF82-E289-4297-A75D-C3790781CF84"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Publisher/Controller/PublishArticlePageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "publishArticle(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

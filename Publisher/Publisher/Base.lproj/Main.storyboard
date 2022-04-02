@@ -48,7 +48,7 @@
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA0-og-7H1">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OA0-og-7H1">
                                                                             <rect key="frame" x="340.5" y="0.0" width="41.5" height="20.5"/>
                                                                             <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <constraints>
@@ -106,8 +106,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4LV-cD-k9y">
+                                <rect key="frame" x="338.5" y="826.5" width="36" height="36"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="DfJ-NL-Qab"/>
+                                    <constraint firstAttribute="width" constant="36" id="g80-0g-uDW"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhV-2Q-vmH">
                                 <rect key="frame" x="334.5" y="829" width="43.5" height="31"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title=""/>
                                 <connections>
@@ -119,8 +128,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="bhV-2Q-vmH" secondAttribute="bottom" constant="36" id="4n9-eO-6It"/>
+                            <constraint firstItem="4LV-cD-k9y" firstAttribute="centerY" secondItem="bhV-2Q-vmH" secondAttribute="centerY" id="MNh-QZ-FRt"/>
                             <constraint firstItem="wFm-nn-9VN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QnI-jo-Dm9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wFm-nn-9VN" secondAttribute="bottom" id="WCy-AG-y6s"/>
+                            <constraint firstItem="4LV-cD-k9y" firstAttribute="centerX" secondItem="bhV-2Q-vmH" secondAttribute="centerX" id="cKm-vn-uVA"/>
                             <constraint firstItem="wFm-nn-9VN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dsp-5l-Y4c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wFm-nn-9VN" secondAttribute="trailing" id="ifw-UG-C5Y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bhV-2Q-vmH" secondAttribute="trailing" constant="36" id="xxc-fe-Whv"/>
@@ -129,6 +140,7 @@
                     <navigationItem key="navigationItem" title="Publisher" id="WBg-UJ-6ei"/>
                     <connections>
                         <outlet property="addNewArticleButton" destination="bhV-2Q-vmH" id="pcT-tT-c1l"/>
+                        <outlet property="buttonBackgroundView" destination="4LV-cD-k9y" id="BWE-1o-AXb"/>
                         <outlet property="publishedArticlesTableView" destination="wFm-nn-9VN" id="3fj-nY-K8e"/>
                     </connections>
                 </viewController>
@@ -262,6 +274,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

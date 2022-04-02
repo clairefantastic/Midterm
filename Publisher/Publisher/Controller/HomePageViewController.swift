@@ -13,9 +13,9 @@ class HomePageViewController: UIViewController {
 
     let db = Firestore.firestore()
     
-    let author = Author()
-    
     @IBOutlet weak var addNewArticleButton: UIButton!
+    
+    @IBOutlet weak var buttonBackgroundView: UIView!
     
     @IBOutlet weak var publishedArticlesTableView: UITableView! {
         
@@ -41,8 +41,16 @@ class HomePageViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addSnapshotListener()
+        
         addRefreshHeader()
 
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        super.viewDidLayoutSubviews()
+        
+        buttonBackgroundView.layer.cornerRadius = buttonBackgroundView.frame.height / 2.0
     }
     
     
@@ -83,17 +91,20 @@ class HomePageViewController: UIViewController {
     func addSnapshotListener() {
 
         db.collection("articles").order(by: "createdTime", descending: false).addSnapshotListener { (querySnapshot, err) in
+            
             if let err = err {
+                
                 print("Error getting documents: \(err)")
+                
             } else {
+                
                 querySnapshot?.documentChanges.forEach({ (documentChange) in
-                if documentChange.type == .added {
                     
+                if documentChange.type == .added {
                    
                     self.publishedArticles.insert(documentChange.document.data(), at: 0)
                     
                     print(self.publishedArticles)
-                    
 
                 }
                 })
