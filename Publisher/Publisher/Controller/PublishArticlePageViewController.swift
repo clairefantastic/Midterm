@@ -22,13 +22,14 @@ class PublishArticlePageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firebaseManager.addData()
+        
         
     }
     
     
     @IBAction func publishArticle(_ sender: Any) {
         
+        firebaseManager.addData()
         self.navigationController?.popViewController(animated: true)
     }
 }

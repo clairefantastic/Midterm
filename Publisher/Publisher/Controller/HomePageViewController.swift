@@ -72,6 +72,7 @@ class HomePageViewController: UIViewController {
                     
                    
                     self.publishedArticles.insert(documentChange.document.data(), at: 0)
+                    
                     print(self.publishedArticles)
                     
 //                    publishedArticles.insert( documentChange.document.data(), at: 0)
@@ -99,10 +100,17 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = publishedArticlesTableView.dequeueReusableCell(withIdentifier: "HomePageCell", for: indexPath) as? HomePageCell
         else { return UITableViewCell() }
         cell.articleTitleLabel.text = publishedArticles[indexPath.row]?["title"] as? String
-        cell.authorNameLabel.text = author.authorName
+       
+        let author = publishedArticles[indexPath.row]?["author"] as? [String: Any]
+        
+        cell.authorNameLabel.text = author?["name"] as? String
+        
         cell.categoryLabel.text = publishedArticles[indexPath.row]?["category"] as? String
+        
         cell.createdTimeLabel.text = publishedArticles[indexPath.row]?["createdTime"] as? String
+        
         cell.articleContentLabel.text =  publishedArticles[indexPath.row]?["content"] as? String
+        
         return cell
         
     }
