@@ -10,6 +10,9 @@ import MJRefresh
 
 class HomePageViewController: UIViewController {
 
+    
+    @IBOutlet weak var addNewArticleButton: UIButton!
+    
     @IBOutlet weak var publishedArticlesTableView: UITableView! {
         
         didSet {
@@ -24,7 +27,17 @@ class HomePageViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
-
+    
+    
+    @IBAction func addNewArticle(_ sender: Any) {
+        
+        guard let PublishArticlePageViewController = storyboard?.instantiateViewController(withIdentifier: "\(PublishArticlePageViewController.self)") as? PublishArticlePageViewController else { return }
+        
+        self.navigationController?.pushViewController(PublishArticlePageViewController, animated: true)
+    
+    }
+    
+    
 
 }
 

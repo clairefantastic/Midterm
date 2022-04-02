@@ -13,4 +13,6 @@ class PublishArticlePageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
 }
