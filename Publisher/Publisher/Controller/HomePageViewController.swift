@@ -39,8 +39,7 @@ class HomePageViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        addSnapshotListener()
+        // Do any additional setup after loading the view
         
         addRefreshHeader()
 
@@ -63,29 +62,27 @@ class HomePageViewController: UIViewController {
     }
     
     func addRefreshHeader() {
+        
           MJRefreshNormalHeader { [weak self] in
             // load some data
+              self?.addSnapshotListener()
+              
               self?.publishedArticlesTableView.mj_header?.endRefreshing()
+              
           }.autoChangeTransparency(true)
           .link(to: publishedArticlesTableView)
+        
       }
     
     func convertTimestamp(serverTimestamp: TimeInterval) -> String {
 
-        let timeStamp = serverTimestamp
-        // 將時間戳轉換成 TimeInterval
-        let timeInterval = TimeInterval(timeStamp)
-        // 初始化一個 Date
-        let date = Date(timeIntervalSince1970: timeInterval)
-        // 實例化一個 DateFormatter
+        let date = Date(timeIntervalSince1970: TimeInterval(serverTimestamp))
+
         let dateFormatter = DateFormatter()
-        // 設定日期格式
+
         dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
-        // 將日期轉換成 string 輸出給 today
-        let today = dateFormatter.string(from: date)
-        print("Time Stamp's Current Time:\(today)")
         
-        return today
+        return dateFormatter.string(from: date)
     }
     
     func addSnapshotListener() {
@@ -103,29 +100,29 @@ class HomePageViewController: UIViewController {
                 if documentChange.type == .added {
                    
                     self.publishedArticles.insert(documentChange.document.data(), at: 0)
-                    
-                    print(self.publishedArticles)
 
                 }
                 })
             }
         }
-//        self.publishedArticlesTableView.reloadData()
         
     }
-    
-    
 
 }
 
 extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         publishedArticles.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = publishedArticlesTableView.dequeueReusableCell(withIdentifier: "HomePageCell", for: indexPath) as? HomePageCell
         else { return UITableViewCell() }
+        
         cell.articleTitleLabel.text = publishedArticles[indexPath.row]?["title"] as? String
        
         let author = publishedArticles[indexPath.row]?["author"] as? [String: Any]
