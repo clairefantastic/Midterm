@@ -42,6 +42,7 @@ class HomePageViewController: UIViewController {
         // Do any additional setup after loading the view.
         addSnapshotListener()
         addRefreshHeader()
+
     }
     
     
@@ -61,9 +62,27 @@ class HomePageViewController: UIViewController {
           .link(to: publishedArticlesTableView)
       }
     
+    func convertTimestamp(serverTimestamp: TimeInterval) -> String {
+
+        let timeStamp = serverTimestamp
+        // 將時間戳轉換成 TimeInterval
+        let timeInterval = TimeInterval(timeStamp)
+        // 初始化一個 Date
+        let date = Date(timeIntervalSince1970: timeInterval)
+        // 實例化一個 DateFormatter
+        let dateFormatter = DateFormatter()
+        // 設定日期格式
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+        // 將日期轉換成 string 輸出給 today
+        let today = dateFormatter.string(from: date)
+        print("Time Stamp's Current Time:\(today)")
+        
+        return today
+    }
+    
     func addSnapshotListener() {
 
-        db.collection("articles").order(by: "createdTime", descending: true).addSnapshotListener { (querySnapshot, err) in
+        db.collection("articles").order(by: "createdTime", descending: false).addSnapshotListener { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -75,15 +94,12 @@ class HomePageViewController: UIViewController {
                     
                     print(self.publishedArticles)
                     
-//                    publishedArticles.insert( documentChange.document.data(), at: 0)
-//  self.currentSender.append(documentChange.document.data()["sender"] as! String)
-//                    self.currentID.append(documentChange.document.documentID)
-//                    self.friendInvitationsTableView.reloadData()
+
                 }
                 })
             }
         }
-        self.publishedArticlesTableView.reloadData()
+//        self.publishedArticlesTableView.reloadData()
         
     }
     
@@ -107,7 +123,9 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.categoryLabel.text = publishedArticles[indexPath.row]?["category"] as? String
         
-        cell.createdTimeLabel.text = publishedArticles[indexPath.row]?["createdTime"] as? String
+        let time = publishedArticles[indexPath.row]?["createdTime"]
+    
+        cell.createdTimeLabel.text = self.convertTimestamp(serverTimestamp: time as? TimeInterval ?? 0)
         
         cell.articleContentLabel.text =  publishedArticles[indexPath.row]?["content"] as? String
         
