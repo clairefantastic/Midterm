@@ -15,6 +15,17 @@ struct PublishedArticle {
      
     var articleContent: String
     
+    var author: Author
+    
+}
+
+struct Author {
+    
+    var authorName: String
+    
+    var authorEmail: String
+    
+    var authorId: String
 }
 
 

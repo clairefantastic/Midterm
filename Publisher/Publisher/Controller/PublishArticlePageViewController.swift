@@ -20,13 +20,7 @@ class PublishArticlePageViewController: UIViewController {
     
     @IBOutlet weak var publishArticleButton: UIButton!
     
-    var authorEmail: String?
-    
-    var authorId: String?
-    
-    var authorName: String?
-    
-    var publishedArticle = PublishedArticle(articleTitle: "", articleCategory: "", articleContent: "")
+    var publishedArticle = PublishedArticle(articleTitle: "", articleCategory: "", articleContent: "", author: Author(authorName: "", authorEmail: "", authorId: ""))
     
     override func viewDidLoad() {
         
@@ -40,13 +34,13 @@ class PublishArticlePageViewController: UIViewController {
     
     @IBAction func publishArticle(_ sender: Any) {
         
-        authorEmail = "wayne@school.appworks.tw"
+        publishedArticle.author.authorEmail = "wayne@school.appworks.tw"
         
-        authorId = "wayne@school.appworks.tw"
+        publishedArticle.author.authorId = "waynechen323"
         
-        authorName = "AKA小安老師"
+        publishedArticle.author.authorName = "AKA小安老師"
         
-        if (authorId != nil) && (authorEmail != nil)  && (authorName != nil) {
+        if (publishedArticle.author.authorEmail != "") && (publishedArticle.author.authorName != "")  && (publishedArticle.author.authorId != "") {
                 
             publishedArticle.articleTitle = inputTitleTextField?.text ?? ""
                 

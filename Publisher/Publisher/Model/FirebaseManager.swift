@@ -15,9 +15,9 @@ class FirebaseManager {
         let document = articles.document()
         let data: [String: Any] = [
             "author": [
-                "email": "wayne@school.appworks.tw",
-                "id": "waynechen323",
-                "name": "AKA小安老師"
+                "email": "\(article.author.authorEmail)",
+                "id": "\(article.author.authorId)",
+                "name": "\(article.author.authorName)"
             ],
             "title": "\(article.articleTitle)",
             "content": "\(article.articleContent)",
