@@ -14,6 +14,8 @@
 		7EB93FF227F7DC5500962A7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB93FF027F7DC5500962A7C /* Main.storyboard */; };
 		7EB93FF427F7DC5600962A7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB93FF327F7DC5600962A7C /* Assets.xcassets */; };
 		7EB93FF727F7DC5600962A7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB93FF527F7DC5600962A7C /* LaunchScreen.storyboard */; };
+		7EB9401F27F7E55A00962A7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EB9401E27F7E55A00962A7C /* GoogleService-Info.plist */; };
+		7EB9402327F7E77A00962A7C /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB9402227F7E77A00962A7C /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		7EB93FF327F7DC5600962A7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EB93FF627F7DC5600962A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EB93FF827F7DC5600962A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EB9401E27F7E55A00962A7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7EB9402227F7E77A00962A7C /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		D1514B89832C12E2F9A6B19F /* Pods_Publisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Publisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -48,7 +52,6 @@
 				245ED8B0C2CB6721B79B42AF /* Pods-Publisher.debug.xcconfig */,
 				633096258AB750334DCD523F /* Pods-Publisher.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,13 +78,31 @@
 			children = (
 				7EB93FEA27F7DC5500962A7C /* AppDelegate.swift */,
 				7EB93FEC27F7DC5500962A7C /* SceneDelegate.swift */,
-				7EB93FEE27F7DC5500962A7C /* ViewController.swift */,
+				7EB9402127F7E74500962A7C /* Controller */,
+				7EB9402027F7E73B00962A7C /* Model */,
 				7EB93FF027F7DC5500962A7C /* Main.storyboard */,
 				7EB93FF327F7DC5600962A7C /* Assets.xcassets */,
 				7EB93FF527F7DC5600962A7C /* LaunchScreen.storyboard */,
 				7EB93FF827F7DC5600962A7C /* Info.plist */,
+				7EB9401E27F7E55A00962A7C /* GoogleService-Info.plist */,
 			);
 			path = Publisher;
+			sourceTree = "<group>";
+		};
+		7EB9402027F7E73B00962A7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EB9402227F7E77A00962A7C /* FirebaseManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7EB9402127F7E74500962A7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7EB93FEE27F7DC5500962A7C /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		CD3EFA1192EC0C1CD2C1A612 /* Frameworks */ = {
@@ -153,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EB93FF727F7DC5600962A7C /* LaunchScreen.storyboard in Resources */,
+				7EB9401F27F7E55A00962A7C /* GoogleService-Info.plist in Resources */,
 				7EB93FF427F7DC5600962A7C /* Assets.xcassets in Resources */,
 				7EB93FF227F7DC5500962A7C /* Main.storyboard in Resources */,
 			);
@@ -207,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB9402327F7E77A00962A7C /* FirebaseManager.swift in Sources */,
 				7EB93FEF27F7DC5500962A7C /* ViewController.swift in Sources */,
 				7EB93FEB27F7DC5500962A7C /* AppDelegate.swift in Sources */,
 				7EB93FED27F7DC5500962A7C /* SceneDelegate.swift in Sources */,
